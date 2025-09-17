@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 관련 태그</title>
+    <style>
+      /* CSS영역 주석 */
+      thead {
+        background-color: wheat;
+      }
+      tfoot {
+        background-color: green;
+        color: white;
+      }
+      #user-content {
+        background-color: #eaeaea;
+      }
+    </style>
+  </head>
+  <body style="padding: 5%;">
+    <!-- 
+      * <table>, <thead>, <tbody>, <tfoot>, <tr>, <td>, <th>
+      1) 표 제작에 사용되는 태그
+      2) 웹 문서에서 방대한 자료를 정리할 때 주로 사용
+      3) 행과 열로 구성되어있으면 행과 열이 만나는 지점을 "셀" 이라고 표현
+      4) 블럭요소
+      5) 태그 종류
+          → <table></table> : 표를 생성해주는 태그
+          → <tr></tr> : 표 내의 한 행을 표현해주는 태그
+          → <th></th> : 표 내의 제목 셀을 표현해주는 태그 (글자 가운데 정렬, 굵게 표현)
+          → <td></td> : 표 내의 일반 셀을 표현해주는 태그 
+      6) 형식
+          <table border="테두리두께">
+            <tr>
+              <th width="가로길이" height="세로길이">문구</th>
+              <th>문구</th>
+            </tr>
+            <tr>
+              <td>문구</td>
+              <td>문구</td>
+            </tr>
+          </table>
+    -->
+
+    <!-- Tip: ctrl+space 도움말 안나올때--> 
+    
+    <h1>기본적인 표 만들기</h1>
+
+    <table border="1px;">
+      <caption>웹 브라우저 종류</caption> 
+      <tr>
+        <th width="160px;" height="50px;">브라우저명</th>
+        <th width="80px;">제조사</th>
+        <th width="200px;">홈페이지 주소</th>
+      </tr>
+      <tr>
+        <td>Internet Explorer</td>
+        <td>MS</td>
+        <td>http://microsoft.com</td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Google</td>
+        <td>http://www.google.com</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Apple</td>
+        <td>http://apple.com</td>
+      </tr>
+    </table>
+    <br><br>
+    <hr>
+
+    <!--
+      * 셀 병합하기
+      1) 셀태그(td, th) 내의 속성을 이용하여 병합 가능
+      2) 병합 속성
+          → colspan : 좌우 셀을 병합
+          → rowspan : 상하 셀을 병합
+      3) 작성 예시
+          <td colspan="2"></td> : 좌우 2개의 셀을 병합하여 표현
+          <td rowspan="2"></td> : 상하 2개의 셀을 병합하여 표현
+    -->
+
+    
+    <h1>셀 병합하기</h1>
+
+    <table border="1px;">
+      <tr>
+        <td colspan="2" rowspan="2" width="120px;" height="160px;"></td>
+        <td width="80px;"></td>
+        <td width="240px;"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td width="70px;" height="50px;"></td>
+        <td colspan="3"></td>
+      </tr>
+      <tr>
+        <td height="160px;"></td>
+        <td colspan="3"></td>
+      </tr>     
+    </table>
+    <br><br>
+    <hr>
+
+    <!--
+      * 테이블 내에 구조 나누기 
+      1) thead : 머리부, 주로 제목 셀들의 행을 표현
+      2) tbody : 몸통부, 주로 내용 셀들의 행을 표현
+      3) tfoot : 바닥부, 주로 취합한 정보들을 표현
+
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+    -->
+    
+    <h1>테이블 구조 나누기</h1>
+    
+    <table border="1">
+      <thead>
+        <tr>
+          <th width="100px;" height="30px;">이름</th>
+          <th width="60px;">나이</th>
+          <th width="60px;">주소</th>
+        </tr>
+      </thead>
+      <tbody id="user-content">
+        <tr>
+          <td>홍길동</td>
+          <td>23</td>
+          <td>서울</td>
+        </tr>
+        <tr>
+          <td>김코드</td>
+          <td>30</td>
+          <td>부산</td>
+        </tr>
+        <tr>
+          <td>박궁금</td>
+          <td>32</td>
+          <td>광주</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">총인원</th>
+          <td>3명</td>
+        </tr>
+      </tfoot>
+    </table>
+
+
+    <div style="padding-bottom: 160px;"></div>
+
+  </body>
+</html>
