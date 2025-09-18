@@ -197,6 +197,35 @@
       2) 제시된 여러개의 값들 중 다수 선택 가능하게 할때 사용
       3) 제출(submit)시 checked(선택된) value값들이 다수 넘어감
     -->
+    <br><br>
+
+    <h3>라디오, 체크박스 </h3>
+    <form action="server/test.do">
+      <fieldset>
+        <legend>라디오 버튼</legend>
+        성별 : 
+        <input type="radio" id="genderX" name="gender" value="X" checked>
+          <label for="genderX">선택안함</label>
+        <input type="radio" id="genderM" name="gender" value="M"> 
+          <label for="genderM">남성</label>
+        <input type="radio" id="genderF" name="gender" value="F"> 
+          <label for="genderF">여성</label>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>체크박스</legend>
+        취미 : 
+          <input type="checkbox" id="reading" name="hobby" value="reding">
+            <label for="reading">독서</label>
+          <input type="checkbox" id="sport" name="hobby" value="sport">
+            <label for="sport">운동</label>
+          <input type="checkbox" id="movie" name="hobby" value="movie">
+            <label for="movie">영화</label>
+      </fieldset>
+      <br>
+      <input type="submit">
+      <input type="reset">
+    </form>
 
     <!--
       * <select>, <option>
@@ -228,5 +257,54 @@
             <option></option>
           </datalist>
     -->
+   <br><br>
+    <h3>select 박스</h3>
+
+    <form action="server/test.do">
+      <fieldset>
+        <legend>일반목록상자</legend>
+        국가번호 :
+        <select name="countryNo" id="">
+          <option value="01">가나 +01</option>
+          <option value="34">이탈리아 +34</option>
+          <option value="82" selected>한국 +82</option>
+          <option value="83">일본 +83</option>
+        </select>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>콤보상자</legend>
+        이메일 : 
+        <input type="text" size="10">@
+        <input type="text" list="domainList">
+          <datalist id="domainList">
+            <option value="">naver.com</option>
+            <option value="">kakao.com</option>
+            <option value="">gmail.com</option>
+          </datalist>
+      </fieldset>
+      <br>
+      <input type="submit">
+    </form>
+    
+    <br>
+    <br>   
+    <h3>기타</h3>
+    <form action="sever/test.do">
+      색상 : <input type="color" name="color"> <br><br>
+      첨부파일 : <input type="file" name="file"> <br><br>
+      숨김정보 : <input type="hidden" name="hidden" value="데이터값 필수">
+      <br><br>
+      <input type="submit">
+      <input type="reset">
+      <input type="button" value="버튼"> <!--백엔드에서 사용할 수 있음-->
+      <br><br>
+      <button type="submit">제출</button>
+      <button type="reset">삭제</button>
+    </form>
+
+    <div style="padding-bottom: 100px;"></div>
   </body>
 </html>
