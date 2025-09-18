@@ -12,7 +12,7 @@
       fieldset {
         width: 80%;
       }
-      
+
     </style>
   </head>
   <body>
@@ -35,7 +35,7 @@
         <br>
         직업 : 
         <select style="width: 200px; height: 26px;">
-          <option  value="null" selected>선택하세요</option>
+          <option value="null" selected>선택하세요</option>
           <option value="student">학생</option>
           <option value="worker">회사원</option>
           <option value="business">자영업자</option>
@@ -45,11 +45,16 @@
         <br>
         <br><br>
         관심분야 : <br><br>
-        <input type="checkbox" value="music"> 음악
-        <input type="checkbox" value="movie"> 영화
-        <input type="checkbox" value="book"> 독서
-        <input type="checkbox" value="sportss"> 운동
-        <input type="checkbox" value="travel"> 여행
+        <input type="checkbox" name="interest" value="music" id="music"> 
+          <label for="music">음악</label>
+        <input type="checkbox" name="interest" value="movie" id="movie"> 
+          <label for="movie">영화</label>
+        <input type="checkbox" name="interest" value="reading" id="reading"> 
+          <label for="reading">독서</label>
+        <input type="checkbox" name="interest" value="sports" id="sports"> 
+          <label for="sports">운동</label>
+        <input type="checkbox" name="interest" value="travel" id="travel"> 
+          <label for="travel">여행</label>
         <br><br>
       </fieldset>
       <br><br>
